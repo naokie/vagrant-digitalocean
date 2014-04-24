@@ -16,6 +16,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     provider.client_id = 'CLIENT_ID'
     provider.api_key = 'API_KEY'
+
+    provider.image = 'Ubuntu 14.04 x64'
     provider.region = 'Singapore 1'
     provider.ssh_key_name = "SSH_KEY_NAME"
   end
