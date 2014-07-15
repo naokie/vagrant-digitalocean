@@ -14,11 +14,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     override.vm.box = 'digital_ocean'
     override.vm.box_url = "https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box"
 
-    provider.client_id = 'CLIENT_ID'
-    provider.api_key = 'API_KEY'
-
+    provider.client_id = "#{ENV['CLIENT_ID']}"
+    provider.api_key = "#{ENV['API_KEY']}"
     provider.image = 'Ubuntu 14.04 x64'
     provider.region = 'Singapore 1'
-    provider.ssh_key_name = "SSH_KEY_NAME"
+    provider.ssh_key_name = "#{ENV['SSH_KEY_NAME']}"
   end
 end
